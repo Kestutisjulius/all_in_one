@@ -7,9 +7,25 @@ const bOStyle = {
   fontWeight: 'bold'
 };
 
+function getRandomInt(max){
+  return Math.floor(Math.random()*Math.floor(max));
+}
+
 const BoxOne = ()=>{
 
-  return (<div className = "box" style = {bOStyle}>1</div>);
+  return (<div className = "box" >1</div>);
+}
+const BoxTwo = ()=>{
+
+  return (<div className = "box">2</div>);
+}
+const BoxThree = ()=>{
+
+  return (<div className = "box">3</div>);
+}
+const BoxRandom = ()=>{
+
+  return (<div className = "box" ><span style = {bOStyle}>{getRandomInt(10)}</span></div>);
 }
 
 function App() {
@@ -18,9 +34,9 @@ function App() {
       <header className="App-header">
 
       <BoxOne/>
-      <div className = "box">2</div>
-      <div className = "box">3</div>
-      
+      <BoxTwo/>
+      <BoxThree/>
+      <BoxRandom/>
 
       </header>
     </div>
